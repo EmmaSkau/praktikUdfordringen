@@ -18,7 +18,7 @@
       <section class="rendered-html">
         <h2>Personer med kompetencer</h2>
         <div v-if="users.length">
-          <ul>
+          <ul class="people">
             <li v-for="(user, i) in users" :key="i">
               <strong>{{ user.preferredName }}</strong> – {{ user.title || 'Ingen titel' }}<br />
               <small>{{ user.email }}</small><br />
@@ -32,6 +32,8 @@
     </div>
   </template>
   
+
+  <!-- SCRIPT -->
   <script setup>
   import { ref, onMounted } from 'vue'
   import Hero from './components/Hero.vue'
@@ -57,9 +59,8 @@
       const result = await response.json()
       data.value = result
   
-      console.log('🎯 CanvasContent1:', result.CanvasContent1)
+      console.log('CanvasContent1:', result.CanvasContent1)
   
-      // Udtræk og parse data-sp-webpartdata
       const matches = [...result.CanvasContent1.matchAll(/data-sp-webpartdata="([^"]+)"/g)]
   
       for (const match of matches) {
@@ -73,20 +74,17 @@
             break
           }
         } catch (err) {
-          console.warn('❌ Fejl ved parse:', err)
+          console.warn('Fejl ved parse:', err)
         }
       }
     } catch (error) {
-      console.error('⛔ Kunne ikke hente data:', error)
+      console.error('Kunne ikke hente data:', error)
     }
   })
   </script>
   
-  <style scoped>
-  body {
-    background: #fdf4f5;
-  }
-  
+  <!-- STYLING -->
+  <style scoped>  
   .wrapper {
     max-width: 800px;
     margin: auto;
@@ -109,10 +107,6 @@
   ul {
     list-style: none;
     padding-left: 0;
-  }
-  
-  li {
-    margin-bottom: 0.5rem;
   }
   
   .extra-content {

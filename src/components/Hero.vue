@@ -1,6 +1,6 @@
 <template>
     <div class="hero">
-      <img :src="image" alt="Banner" />
+      <img :src="image" alt="Banner billede" />
       <h1>{{ title }}</h1>
     </div>
   </template>
