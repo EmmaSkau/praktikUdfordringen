@@ -4,7 +4,7 @@ Et lille frontend-projekt, hvor jeg viser data fra et API via en proxy. Udfordri
 
 ---
 
-** OBS: **
+## OBS:
 For at kunne køre appen skal node server.js først køre, så den siger "Kører på localhost:3000". Derefter skal vite opstartes via npm run dev.
 
 ** Bemærkninger **
