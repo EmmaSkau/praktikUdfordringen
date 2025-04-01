@@ -1,4 +1,4 @@
-# 🎯 Praktik API Udfordring – Vue 3 + Node Proxy
+# 🎯 Praktik API Udfordring – Vue + Node.js
 
 Et lille frontend-projekt, hvor jeg viser data fra et API. Udfordringen handler om at hente og præsentere information struktureret, og give et indblik i mine evner med Vue, Node og API-håndtering.
 
